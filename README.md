@@ -1,3 +1,3 @@
 # node js training
 
-node js couse
+node js course
