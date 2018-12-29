@@ -10,7 +10,11 @@ app.get("/contact", function(req, res) {
   res.sendFile(__dirname + "/contact.html");
 });
 app.get("/profile/:name", function(req, res) {
-  let data = { age: 23, job: "web developer" };
+  let data = {
+    age: 23,
+    job: "web developer",
+    hobbies: ["eating", "fighting", "fishing"]
+  };
   res.render("profile", { person: req.params.name, data: data });
 });
 app.listen(3000);
