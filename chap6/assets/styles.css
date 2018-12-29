@@ -8,3 +8,8 @@ h1 {
   font-size: 48px;
   text-transform: uppercase;
 }
+#contact-form label,
+#contact-form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
