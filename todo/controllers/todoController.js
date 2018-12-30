@@ -1,4 +1,24 @@
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+// Connect to the database
+
+mongoose.connect(
+  "mongodb://test:7wU9xYUJLPPuzmq@ds145434.mlab.com:45434/todolist"
+);
+
+// Create a schema - this is like a blueprint
+
+let todoSchema = new mongoose.Schema({
+  item: String
+});
+
+// Create Todo Model
+let Todo = mongoose.model("Todo", todoSchema);
+
+var itemOne = Todo({ item: "buy flowers" }).save(function(err) {
+  if (err) throw err;
+  console.log("item saved");
+});
 
 let data = [
   { item: "get milk" },
